@@ -1,5 +1,5 @@
-// ProductController.java
-package com.eksamen.demo.product;
+// DeliveryController.java
+package com.eksamen.demo.delivery;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/deliveries")
+public class DeliveryController {
 
     @Autowired
-    private ProductService productService;
+    private DeliveryService deliveryService;
 
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    public List<Delivery> getAllDeliveries() {
+        return deliveryService.getAllDeliveries();
     }
 
     // Add more controller methods as needed

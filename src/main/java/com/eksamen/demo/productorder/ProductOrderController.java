@@ -1,5 +1,5 @@
-// ProductController.java
-package com.eksamen.demo.product;
+// ProductOrderController.java
+package com.eksamen.demo.productorder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
-public class ProductController {
+@RequestMapping("/product-orders")
+public class ProductOrderController {
 
     @Autowired
-    private ProductService productService;
+    private ProductOrderService productOrderService;
 
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    public List<ProductOrder> getAllProductOrders() {
+        return productOrderService.getAllProductOrders();
     }
 
     // Add more controller methods as needed
